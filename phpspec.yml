@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: TUI_UV
+        psr4_prefix: TUI_UV
+        src_path: app
