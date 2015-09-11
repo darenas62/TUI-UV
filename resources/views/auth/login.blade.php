@@ -8,9 +8,14 @@
                     <div class="panel-body">
                         {!! Form::open(['route' => 'auth/login', 'class' => 'form']) !!}
                             <div class="form-group">
+                                <label>RUN</label>
+                                {!! Form::number('run', '', ['class'=> 'form-control']) !!}
+                            </div>
+                            <!-- <div class="form-group">
                                 <label>Email</label>
                                 {!! Form::email('email', '', ['class'=> 'form-control']) !!}
                             </div>
+                            -->
                             <div class="form-group">
                                 <label>Password</label>
                                 {!! Form::password('password', ['class'=> 'form-control']) !!}
