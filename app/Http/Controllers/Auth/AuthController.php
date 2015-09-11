@@ -47,6 +47,8 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
+            'group' => 'required|digits_between:1,4',
+            'run' => 'required|unique:users,run',
         ]);
     }
 
@@ -61,6 +63,8 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'run' => $data['run'],
+            'group' => $data['group'],
             'password' => bcrypt($data['password']),
         ]);
     }
