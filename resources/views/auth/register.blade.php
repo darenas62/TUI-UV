@@ -22,10 +22,13 @@
                             <label>Password</label>
                             {!! Form::password('password', ['class'=> 'form-control']) !!}
                         </div>
-
                         <div class="form-group">
                             <label>Password confirmation</label>
                             {!! Form::password('password_confirmation', ['class'=> 'form-control']) !!}
+                        </div>
+                        <div class="form-group">
+                            <label>Group</label>
+                            {!! Form::selectRange('number', 1, 3) !!}
                         </div>
 
                         <div>
