@@ -29,3 +29,11 @@ Route::get('auth/logout', ['as' => 'auth/logout', 'uses' => 'Auth\AuthController
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthController@postRegister']);
+
+// Usuarios
+Route::get('secretaria', [
+	'as' => 'secretaria',
+	'uses' => 'Users\secretariaController@index'
+	]);
+Route::get('estudiante', 'Users\estudianteController@index');
+Route::get('admin', 'Users\adminController@index');
