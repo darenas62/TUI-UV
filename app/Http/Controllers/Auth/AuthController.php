@@ -12,6 +12,7 @@ class AuthController extends Controller
 {
     //entre comillas la ruta a la que deseas redireccionar
     protected $redirectTo = 'auth/register';
+    protected $username = 'run';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
