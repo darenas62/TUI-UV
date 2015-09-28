@@ -29,24 +29,16 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-            <li><a href="{!! URL::to('/') !!}">Inicio</a>
-            @if (!Auth::guest())
-              @if (Auth::user()->group == 1 | Auth::user()->group == 3)
-              <li><a href="{!! URL::to('noticias/create') !!}">Publicar una noticia</a></li>
-              @endif
-            @endif
+            <li><a href="/">Inicio</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             @if (Auth::guest())
                 <li><a href="{{route('auth/login')}}">Acceder</a></li>
-
+            <li><a href="{{route('auth/register')}}">Registrar</a></li>
             @else
                     <li>
-                        <a href="#">Bienvenido(a) {{ Auth::user()->name }}</a>
+                        <a href="#">{{ Auth::user()->name }}</a>
                     </li>
-                    @if(Auth::user()->group == 1)
-                      <li><a href="{{route('auth/register')}}">Registrar</a></li>
-                    @endif
                     <li><a href="{{route('auth/logout')}}">Salir</a></li>
                     
               @endif
@@ -58,7 +50,7 @@
                @if (Session::has('errors'))
         <div class="alert alert-warning" role="alert">
       <ul>
-              <strong>¡Oops! Algo salió mal : </strong>
+              <strong>¡Oops! Algo salió mal: </strong>
           @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
                 @endforeach

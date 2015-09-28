@@ -10,29 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/* Inicio V1 
-Route::get('/', [
-  'as' => 'home',
-  'uses' => 'HomeController@index'
-]);
 
-/* Home Bootstrap 
-Route::get('home', [
-  'as' => 'home',
-  'uses' => 'HomeController@index'
-]);
-/* */
-
-/* Inicio con noticias RECARGADOOOO */
-Route::get('/', [
-  'as' => 'home',
-  'uses' => 'noticiaController@index'
-]);
+Route::get('/', function () {
+    return view('welcome');
+});
 
 /* Home Bootstrap */
 Route::get('home', [
   'as' => 'home',
-  'uses' => 'noticiaController@index'
+  'uses' => 'HomeController@index'
 ]);
 
 // Authentication routes...
@@ -46,12 +32,8 @@ Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthContr
 
 // Usuarios
 Route::get('secretaria', [
-  'as' => 'secretaria',
-  'uses' => 'Users\secretariaController@index'
-  ]);
-Route::post('secretaria', 
-  ['as' => 'secretaria', 'uses' => 'Users\secretariaController@create']);
+	'as' => 'secretaria',
+	'uses' => 'Users\secretariaController@index'
+	]);
 Route::get('estudiante', 'Users\estudianteController@index');
 Route::get('admin', 'Users\adminController@index');
-
-Route::resource('noticias', 'noticiaController');
