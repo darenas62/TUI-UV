@@ -32,7 +32,7 @@
                             {!! Form::password('password_confirmation', ['class'=> 'form-control']) !!}
                         </div>
                         <div class="form-group">
-                            <label>Group</label>
+                            <label>Grupo</label>
                             {!! Form::select('group', [
                             1  =>  'Administrador',
                             2  =>  'Profesor',
