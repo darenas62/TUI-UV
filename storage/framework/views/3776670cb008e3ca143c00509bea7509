@@ -1,0 +1,111 @@
+<?php $__env->startSection('content'); ?>
+<div class="container">
+    <?php if(!Auth::guest()): ?>
+      <?php if(Auth::user()->group == 1): ?>
+      <!-- Estudiante -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">Panel Administrador</div>
+
+        <div class="panel-body">
+          <p>
+            <b>Bienvenido <?php echo e(Auth::user()->name); ?></b>
+          </p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada.</p>
+        </div>
+      </div>
+      <?php endif; ?>
+      <?php if(Auth::user()->group == 4): ?>
+      <!-- Estudiante -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">Noticias académicas</div>
+        <div class="panel-body">
+          <p>
+            <b>Bienvenido <?php echo e(Auth::user()->name); ?></b>
+          </p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada.</p>
+        </div>
+      </div>
+      <?php endif; ?>
+      <?php if(Auth::user()->group == 3): ?>
+      <!-- Secretaria -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">Panel Secretaria</div>
+
+        <div class="panel-body">
+          <p>
+            <b>Bienvenido <?php echo e(Auth::user()->name); ?></b>
+          </p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada.</p>
+        </div>
+      </div>
+      <?php endif; ?>
+    <?php endif; ?>
+
+    <h1>Noticias académicas</h1>
+
+<!-- will be used to show any messages -->
+<?php if(Session::has('message')): ?>
+    <div class="alert alert-info"><?php echo e(Session::get('message')); ?></div>
+<?php endif; ?>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Titulo</td>
+            <td>Contenido</td>
+            <?php if(!Auth::guest()): ?>
+              <?php if(Auth::user()->group == 1 | Auth::user()->group == 3): ?>
+                <td>Acciones</td>
+              <?php endif; ?>
+            <?php endif; ?>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($noticias as $key => $value): ?>
+        <tr>
+            <td><?php echo e($value->id); ?></td>
+            <td>
+                <a href="<?php echo e(URL::to('noticias/' . $value->id)); ?>">
+                    <?php echo e($value->titulo); ?>
+
+                </a>
+            </td>
+            <td><?php echo e($value->contenido); ?></td>
+
+            <?php if(!Auth::guest()): ?>
+              <?php if(Auth::user()->group == 1 | Auth::user()->group == 3): ?>
+                <!-- we will also add show, edit, and delete buttons -->
+                <td>
+
+                    <!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
+                    <!-- we will add this later since its a little more complicated than the other two buttons -->
+                    <?php echo Form::open(array('url' => 'noticias/' . $value->id, 'class' => 'pull-right')); ?>
+
+                        <?php echo Form::hidden('_method', 'DELETE'); ?>
+
+                        <?php echo Form::submit('Borrar esta noticia', array('class' => 'btn btn-warning')); ?>
+
+                    <?php echo Form::close(); ?>
+
+                    <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
+                    <a class="btn btn-small btn-success" href="<?php echo e(URL::to('noticias/' . $value->id)); ?>">Ver esta noticia</a>
+
+                    <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+                    <a class="btn btn-small btn-info" href="<?php echo e(URL::to('noticias/' . $value->id . '/edit')); ?>">Editar esta noticia</a>
+
+                </td>
+              <?php endif; ?>
+            <?php endif; ?>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

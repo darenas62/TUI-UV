@@ -1,0 +1,58 @@
+<!-- app/views/nerds/create.blade.php -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secretaria Publicar</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="<?php echo e(URL::to('noticias')); ?>">Inicio</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="<?php echo URL::to('noticias'); ?>">Ver todas las noticias</a></li>
+        <li><a href="<?php echo URL::to('noticias/create'); ?>">Publicar una noticia</a>
+    </ul>
+</nav>
+
+<h1>Publicar una noticia</h1>
+
+<!-- if there are creation errors, they will show here -->
+        <ul>
+            <?php foreach($errors->all() as $error): ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; ?>
+        </ul>
+
+<?php echo Form::open(array('url' => 'noticias')); ?>
+
+
+    <div class="form-group">
+        <?php echo Form::label('titulo', 'Titulo'); ?>
+
+        <?php echo Form::text('titulo', Input::old('titulo'), array('class' => 'form-control')); ?>
+
+    </div>
+
+    <div class="form-group">
+        <?php echo Form::label('contenido', 'Mensaje'); ?>
+
+        <?php echo Form::textarea('contenido', null, 
+                array('required', 
+                      'class'=>'form-control', 
+                      'placeholder'=>'Ingrese su mensaje aqui')); ?>
+
+    </div>
+
+    <?php echo Form::submit('Publicar!', array('class' => 'btn btn-primary')); ?>
+
+
+<?php echo Form::close(); ?>
+
+
+</div>
+</body>
+</html> 
