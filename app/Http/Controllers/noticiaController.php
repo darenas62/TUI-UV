@@ -81,8 +81,7 @@ class noticiaController extends Controller
 
         // show the view and pass the nerd to it
         return \View::make('noticias.show')
-            ->with('noticia', $noticia)
-            ->sortBy('id')->get();
+            ->with('noticia', $noticia);
     }
 
     /**
