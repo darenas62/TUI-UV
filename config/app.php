@@ -136,6 +136,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Mitul\Generator\GeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -203,6 +206,13 @@ return [
          */
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
+
+        /*
+         * CRUD Calendario
+         */
+        'Form'  => 'Illuminate\Html\FormFacade',
+        'HTML'  => 'Illuminate\Html\HtmlFacade',
+        'Flash' => 'Laracasts\Flash\Flash'
     ],
 
 ];

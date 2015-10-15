@@ -45,13 +45,17 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthController@postRegister']);
 
 // Usuarios
-Route::get('secretaria', [
-  'as' => 'secretaria',
-  'uses' => 'Users\secretariaController@index'
-  ]);
-Route::post('secretaria', 
-  ['as' => 'secretaria', 'uses' => 'Users\secretariaController@create']);
+
+
 Route::get('estudiante', 'Users\estudianteController@index');
 Route::get('admin', 'Users\adminController@index');
 
 Route::resource('noticias', 'noticiaController');
+
+
+Route::resource('calendars', 'CalendarController');
+
+Route::get('calendars/{id}/delete', [
+    'as' => 'calendars.delete',
+    'uses' => 'CalendarController@destroy',
+]);
