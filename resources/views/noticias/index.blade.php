@@ -30,7 +30,7 @@
       </div>
       <!-- FIN NOTIFICACIONES -->
       <!-- Horario -->
-        
+      
        <div id='calendar'></div>
       <!-- FIN HORARIO -->
       @endif

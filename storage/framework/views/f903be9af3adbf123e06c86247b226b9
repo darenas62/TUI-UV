@@ -7,15 +7,18 @@
     <title>TUI UV</title>
     <?php echo Html::style('assets/css/bootstrap.css'); ?>
 
-    <?php echo Html::style('assets/css/fullcalendar.min.css'); ?>
+    <!--<?php echo Html::style('assets/fullcalendar-2.4.0/fullcalendar.min.css'); ?>
 
-    <?php echo Html::style('assets/css/fullcalendar.print.css'); ?>
+    <?php echo Html::style('assets/fullcalendar-2.4.0/fullcalendar.print.css'); ?>
 
+    <?php echo Html::style('assets/fullcalendar-2.4.0/fullcalendar.css'); ?>-->
+    <link href='assets/fullcalendar-2.4.0/fullcalendar.css' rel='stylesheet' />
+    <link href='assets/fullcalendar-2.4.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='assets/fullcalendar-2.4.0/lib/moment.min.js'></script>
+    <script src='assets/fullcalendar-2.4.0/lib/jquery.min.js'></script>
+    <script src='assets/fullcalendar-2.4.0/fullcalendar.min.js'></script>
+    <script src='assets/fullcalendar-2.4.0/lang/es.js'></script>
     <!-- Fonts -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -79,155 +82,121 @@
     <!-- Scripts -->
     <?php echo Html::script('assets/js/bootstrap.min.js'); ?>
 
-    <?php echo Html::script('assets/fullcalendar-2.4.0/fullcalendar.min.js'); ?>
+   <!-- <?php echo Html::script('assets/fullcalendar-2.4.0/fullcalendar.min.js'); ?>
 
     <?php echo Html::script('assets/js/moment.js'); ?>
 
     <?php echo Html::script('assets/js/jquery-2.1.4.min.js'); ?>
 
-    <?php echo Html::script('assets/js/jquery-ui.min'); ?>
-
+    <?php echo Html::script('assets/js/jquery-ui.min'); ?>-->
     <!-- Full calendar-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+<script>
     
-    /*
-      jQuery document ready
+  $(document).ready(function() {
+    var currentLangCode = 'es';
+
+    // build the language selector's options
+    /*$.each($.fullCalendar.langs, function(langCode) {
+      $('#lang-selector').append(
+        $('<option/>')
+          .attr('value', langCode)
+          .prop('selected', langCode == currentLangCode)
+          .text(langCode)
+      );
+    });
+
+    // rerender the calendar when the selected option changes
+    $('#lang-selector').on('change', function() {
+      if (this.value) {
+        currentLangCode = this.value;
+        $('#calendar').fullCalendar('destroy');
+        renderCalendar();
+      }
+    });
     */
-    
-    $(document).ready(function()
-    {
-      /*
-        date store today date.
-        d store today date.
-        m store current month.
-        y store current year.
-      */
-      var date = new Date();
-      var d = date.getDate();
-      var m = date.getMonth();
-      var y = date.getFullYear();
-      
-      /*
-        Initialize fullCalendar and store into variable.
-        Why in variable?
-        Because doing so we can use it inside other function.
-        In order to modify its option later.
-      */
-      
-      var calendar = $('#calendar').fullCalendar(
-      {
-        /*
-          header option will define our calendar header.
-          left define what will be at left position in calendar
-          center define what will be at center position in calendar
-          right define what will be at right position in calendar
-        */
-        header:
-        {
+    function renderCalendar() {
+      $('#calendar').fullCalendar({
+        header: {
           left: 'prev,next today',
           center: 'title',
           right: 'month,agendaWeek,agendaDay'
         },
-        /*
-          defaultView option used to define which view to show by default,
-          for example we have used agendaWeek.
-        */
         defaultView: 'agendaWeek',
-        /*
-          selectable:true will enable user to select datetime slot
-          selectHelper will add helpers for selectable.
-        */
-        selectable: true,
-        selectHelper: true,
-        /*
-          when user select timeslot this option code will execute.
-          It has three arguments. Start,end and allDay.
-          Start means starting time of event.
-          End means ending time of event.
-          allDay means if events is for entire day or not.
-        */
-        select: function(start, end, allDay)
-        {
-          /*
-            after selection user will be promted for enter title for event.
-          */
-          var title = prompt('Event Title:');
-          /*
-            if title is enterd calendar will add title and event into fullCalendar.
-          */
-          if (title)
-          {
-            calendar.fullCalendar('renderEvent',
-              {
-                title: title,
-                start: start,
-                end: end,
-                allDay: allDay
-              },
-              true // make the event "stick"
-            );
-          }
-          calendar.fullCalendar('unselect');
-        },
-        /*
-          editable: true allow user to edit events.
-        */
-        editable: true,
-        /*
-          events is the main option for calendar.
-          for demo we have added predefined events in json object.
-        */
+        lang: currentLangCode,
+        columnFormat: 'dddd',
+        buttonIcons: false, // show the prev/next text
+        weekNumbers: true,
+        editable: false,
+        eventLimit: true, // allow "more" link when too many events
+        firstDay: 1,
+        timeFormat: 'H:mm',
+        hiddenDays: [ 6, 0],
+        handleWindowResize: true,
+        minTime: '08:00:00',
+        maxTime: '20:00:00',
+        /*views: {
+          agenda5Week: {
+                type: 'agenda',
+                duration: { days: 5 },
+                buttonText: 'Semana'
+            }
+        },*/
         events: [
           {
-            title: 'All Day Event',
-            start: new Date(y, m, 1)
+            title: 'Lenguajes de programación',
+            dow: [1],
+            start: '12:00:00',
+            end: '13:30:00'
           },
           {
-            title: 'Long Event',
-            start: new Date(y, m, d-5),
-            end: new Date(y, m, d-2)
+            title: 'Lenguajes de programación',
+            dow: [2],
+            start: '10:15:00',
+            end: '11:45:00'
           },
           {
-            id: 999,
-            title: 'Repeating Event',
-            start: new Date(y, m, d-3, 16, 0),
-            allDay: false
+            title: 'Sistemas de bases de datos',
+            dow: [2],
+            start: '08:30:00',
+            end: '10:00:00'
           },
           {
-            id: 999,
-            title: 'Repeating Event',
-            start: new Date(y, m, d+4, 16, 0),
-            allDay: false
+            title: 'Sistemas de bases de datos',
+            dow: [3],
+            start: '10:15:00',
+            end: '11:45:00'
           },
           {
-            title: 'Meeting',
-            start: new Date(y, m, d, 10, 30),
-            allDay: false
+            title: 'Biología',
+            dow: [3],
+            start: '14:15:00',
+            end: '17:00:00'
           },
           {
-            title: 'Lunch',
-            start: new Date(y, m, d, 12, 0),
-            end: new Date(y, m, d, 14, 0),
-            allDay: false
+            title: 'Evaluación de proyectos',
+            dow: [1],
+            start: '14:30:00',
+            end: '17:30:00'
           },
           {
-            title: 'Birthday Party',
-            start: new Date(y, m, d+1, 19, 0),
-            end: new Date(y, m, d+1, 22, 30),
-            allDay: false
+            title: 'Arquitectura de software',
+            dow: [4],
+            start: '10:15:00',
+            end: '13:30:00'
           },
           {
-            title: 'Click for Google',
-            start: new Date(y, m, 28),
-            end: new Date(y, m, 29),
-            url: 'http://google.com/'
-          }
+            title: 'Desarrollo web',
+            dow: [5],
+            start: '10:15:00',
+            end: '13:30:00'
+          },
         ]
       });
-      
-    });
+    }
 
+    renderCalendar();
+  });
   </script>
 </body>
 </html>
