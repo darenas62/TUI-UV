@@ -53,5 +53,6 @@ Route::post('secretaria',
   ['as' => 'secretaria', 'uses' => 'Users\secretariaController@create']);
 Route::get('estudiante', 'Users\estudianteController@index');
 Route::get('admin', 'Users\adminController@index');
+Route::get('profesor', 'Users\profesorController@index');
 
 Route::resource('noticias', 'noticiaController');

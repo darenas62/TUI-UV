@@ -1,4 +1,7 @@
+
+
 <?php $__env->startSection('content'); ?>
+
 <div class="container">
     <?php if(!Auth::guest()): ?>
       <?php if(Auth::user()->group == 1): ?>
@@ -17,16 +20,22 @@
       <?php endif; ?>
       <?php if(Auth::user()->group == 4): ?>
       <!-- Estudiante -->
+      <!-- Crear un if para que esto se muestre sólo si hay notificaciones-->
       <div class="panel panel-primary">
-        <div class="panel-heading">Noticias académicas</div>
+        <div class="panel-heading">Notificaciones</div>
         <div class="panel-body">
-          <p>
-            <b>Bienvenido <?php echo e(Auth::user()->name); ?></b>
-          </p>
           <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
           <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada.</p>
         </div>
       </div>
+      <!-- FIN NOTIFICACIONES -->
+      <!-- Horario -->
+            <?php echo $calendar->calendar(); ?>
+
+    <?php echo $calendar->script(); ?>
+
+       <div id='calendar'></div>
+      <!-- FIN HORARIO -->
       <?php endif; ?>
       <?php if(Auth::user()->group == 3): ?>
       <!-- Secretaria -->
@@ -42,8 +51,18 @@
         </div>
       </div>
       <?php endif; ?>
-    <?php endif; ?>
+            <?php if(Auth::user()->group == 2): ?>
+      <!-- Profesor -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">Notificaciones</div>
+        <div class="panel-body">
 
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+          <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec rutrum congue leo eget malesuada.</p>
+        </div>
+      </div>
+      <?php endif; ?>
+    <?php endif; ?>
     <h1>Noticias académicas</h1>
 
 <!-- will be used to show any messages -->
@@ -104,8 +123,10 @@
     <?php endforeach; ?>
     </tbody>
 </table>
-
 </div>
+ 
+
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
