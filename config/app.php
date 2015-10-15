@@ -80,7 +80,7 @@ return [
 
     'key' => env('APP_KEY', 'SomeRandomString'),
 
-    'cipher' => 'AES-256-CBC',
+    'cipher' => 'AES-128-CBC',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,6 +136,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+	'Illuminate\View\ViewServiceProvider',
+        'Illuminate\Html\HtmlServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
+        'Mitul\Generator\GeneratorServiceProvider',
 
         /*
          * Application Service Providers...
@@ -198,6 +202,9 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+	'Form'  => 'Illuminate\Html\FormFacade',
+        'HTML'  => 'Illuminate\Html\HtmlFacade',
+        'Flash' => 'Laracasts\Flash\Flash',
         /*
          * Bootstrap
          */

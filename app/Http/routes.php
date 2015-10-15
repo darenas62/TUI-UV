@@ -55,3 +55,11 @@ Route::get('estudiante', 'Users\estudianteController@index');
 Route::get('admin', 'Users\adminController@index');
 
 Route::resource('noticias', 'noticiaController');
+
+
+Route::resource('suspensis', 'suspensiController');
+
+Route::get('suspensis/{id}/delete', [
+    'as' => 'suspensis.delete',
+    'uses' => 'suspensiController@destroy',
+]);
