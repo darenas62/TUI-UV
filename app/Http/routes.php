@@ -59,3 +59,11 @@ Route::get('calendars/{id}/delete', [
     'as' => 'calendars.delete',
     'uses' => 'CalendarController@destroy',
 ]);
+
+
+Route::resource('horarios', 'HorarioController');
+
+Route::get('horarios/{id}/delete', [
+    'as' => 'horarios.delete',
+    'uses' => 'HorarioController@destroy',
+]);
