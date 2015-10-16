@@ -61,6 +61,7 @@
             <li><a href="<?php echo URL::to('/'); ?>">Inicio</a>
             <?php if(!Auth::guest()): ?>
               <?php if(Auth::user()->group == 1 | Auth::user()->group == 3): ?>
+              <li><a href="<?php echo URL::to('calendars'); ?>">Calendario de evaluaciones</a></li>
               <li><a href="<?php echo URL::to('noticias/create'); ?>">Publicar una noticia</a></li>
               <?php endif; ?>
             <?php endif; ?>

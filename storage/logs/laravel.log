@@ -3835,3 +3835,146 @@ Stack trace:
     [status] => 200
 )
   
+[2015-10-16 09:44:43] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(222): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(87): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/vagrant/Code/tui_1/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/vagrant/Code/tui_1/public/index.php(0): {main}()
+#13 {main}  
+[2015-10-16 09:44:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(222): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(87): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/vagrant/Code/tui_1/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle()
+#12 /home/vagrant/Code/tui_1/public/index.php(0): {main}()
+#13 {main}  
+[2015-10-16 09:45:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(98): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/vagrant/Code/tui_1/artisan(0): {main}()
+#12 {main}  
+[2015-10-16 09:46:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(98): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/vagrant/Code/tui_1/artisan(0): {main}()
+#12 {main}  
+[2015-10-16 09:47:39] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(98): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/vagrant/Code/tui_1/artisan(0): {main}()
+#12 {main}  
+[2015-10-16 09:47:48] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Laracasts\Flash\FlashServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(98): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/vagrant/Code/tui_1/artisan(0): {main}()
+#12 {main}  
+[2015-10-16 09:48:29] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 09:48:29] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=349ed239989c10a38bb135d4aa0463cb74680a888f6d8bb35253b18230812de0&auth_timestamp=1444999709&auth_version=1.0&body_md5=a756f0ce64dd6a2900f60d2138a474ba )  
+[2015-10-16 09:48:29] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"Se suspende la clase de desarrollo web\"}","channels":["canal-suspension"]}  
+[2015-10-16 09:48:29] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 09:49:03] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 09:49:03] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=8e7d577d676bbfa981cc6105ff1a8c672ce21e7b0ccb8054aaf10aa54514307c&auth_timestamp=1444999743&auth_version=1.0&body_md5=a756f0ce64dd6a2900f60d2138a474ba )  
+[2015-10-16 09:49:03] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"Se suspende la clase de desarrollo web\"}","channels":["canal-suspension"]}  
+[2015-10-16 09:49:04] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 09:51:33] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Mitul\Generator\GeneratorServiceProvider' not found' in /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php:146
+Stack trace:
+#0 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\Component\Debug\Exception\FatalErrorException->__construct()
+#1 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(118): Illuminate\Foundation\Bootstrap\HandleExceptions->fatalExceptionFromError()
+#2 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(0): Illuminate\Foundation\Bootstrap\HandleExceptions->handleShutdown()
+#3 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(114): Illuminate\Foundation\ProviderRepository->createProvider()
+#4 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest()
+#5 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(507): Illuminate\Foundation\ProviderRepository->load()
+#6 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap()
+#8 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(208): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
+#10 /home/vagrant/Code/tui_1/artisan(36): Illuminate\Foundation\Console\Kernel->handle()
+#11 /home/vagrant/Code/tui_1/artisan(0): {main}()
+#12 {main}  
+[2015-10-16 09:52:06] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 09:52:06] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=0ce975c1e763ac9736ae912ace5c0d1de11a70d568fcb1b8b41a35531a425a5f&auth_timestamp=1444999926&auth_version=1.0&body_md5=a756f0ce64dd6a2900f60d2138a474ba )  
+[2015-10-16 09:52:06] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"Se suspende la clase de desarrollo web\"}","channels":["canal-suspension"]}  
+[2015-10-16 09:52:06] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 09:52:19] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 09:52:19] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=f37aaa356b90374caaa0b169d77d68117cf1de111a7b4d70f3c15611cb370b04&auth_timestamp=1444999939&auth_version=1.0&body_md5=a756f0ce64dd6a2900f60d2138a474ba )  
+[2015-10-16 09:52:19] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"Se suspende la clase de desarrollo web\"}","channels":["canal-suspension"]}  
+[2015-10-16 09:52:19] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
