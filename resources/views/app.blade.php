@@ -70,4 +70,39 @@
     <!-- Scripts -->
     {!! Html::script('assets/js/bootstrap.min.js') !!}
 </body>
+
+<body>
+
+  <div class="container"> 
+  <h1>suspensiones</h1> 
+    <table class="table">  
+      <tr>  
+        <td width='150' style='font-weight: bold'>RAMO</td>  
+        <td width='150' style='font-weight: bold'>MOTIVO</td>  
+       
+      </tr>  
+  <?php  
+      $db1="devweb";
+      $db=mysqli_connect("localhost","root","","devweb");
+
+      mysqli_select_db($db,$db1);
+      $query = "select * from suspensis";     // Esta linea hace la consulta 
+      $result = mysqli_query($db,"SELECT * FROM suspensis");;  
+
+      while ($registro = mysqli_fetch_array($result)){  
+  echo "  
+      <tr>  
+        <td >".$registro['ramo']."</td>  
+        <td >".$registro['motivo']."</td>  
+       
+        <td width='150'></td>  
+
+     </tr>  
+  ";  
+  }  
+  
+?>  
+   </table>  
+</div>  
+</body>
 </html>
