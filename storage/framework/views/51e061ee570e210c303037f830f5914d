@@ -1,23 +1,8 @@
+
+
+<?php $__env->startSection('content'); ?>
 <!-- app/views/nerds/create.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Secretaria Publicar</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
 <div class="container">
-
-<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="<?php echo e(URL::to('noticias')); ?>">Inicio</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="<?php echo URL::to('noticias'); ?>">Ver todas las noticias</a></li>
-        <li><a href="<?php echo URL::to('noticias/create'); ?>">Publicar una noticia</a>
-    </ul>
-</nav>
-
 <h1>Publicar una noticia</h1>
 
 <!-- if there are creation errors, they will show here -->
@@ -54,5 +39,6 @@
 
 
 </div>
-</body>
-</html> 
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

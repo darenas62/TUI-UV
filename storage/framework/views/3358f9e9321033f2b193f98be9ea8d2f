@@ -1,9 +1,10 @@
+
 <?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Login</div>
+                    <div class="panel-heading">Iniciar sesión</div>
                     <div class="panel-body">
                         <?php echo Form::open(['route' => 'auth/login', 'class' => 'form']); ?>
 
@@ -19,15 +20,15 @@
                             </div>
                             -->
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Contraseña</label>
                                 <?php echo Form::password('password', ['class'=> 'form-control']); ?>
 
                             </div>
                             <div class="checkbox">
-                                <label><input name="remember" type="checkbox"> Remember me</label>
+                                <label><input name="remember" type="checkbox"> ¿Recordar?</label>
                             </div>
                             <div>                            
-                                <?php echo Form::submit('login',['class' => 'btn btn-primary']); ?>
+                                <?php echo Form::submit('Acceder',['class' => 'btn btn-primary']); ?>
 
                             </div>
                         <?php echo Form::close(); ?>
