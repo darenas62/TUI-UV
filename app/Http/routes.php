@@ -24,6 +24,30 @@ Route::get('home', [
 /* */
 
 /* Inicio con noticias RECARGADOOOO */
+use Illuminate\Support\Facades\App;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+
+class TestEvent implements ShouldBroadcast
+{
+    public $text;
+
+    public function __construct($text)
+    {
+        $this->text = $text;
+    }
+
+    public function broadcastOn()
+    {
+        return ['test-channel'];
+    }
+}
+
+get('/broadcast', function() {
+    event(new TestEvent('Broadcasting in Laravel using Pusher!'));
+
+    return view('welcome');
+});
+
 Route::get('/', [
   'as' => 'home',
   'uses' => 'noticiaController@index'
@@ -56,3 +80,17 @@ Route::get('admin', 'Users\adminController@index');
 Route::get('profesor', 'Users\profesorController@index');
 
 Route::resource('noticias', 'noticiaController');
+
+get('/bridge', function() {
+    $pusher = App::make('pusher');
+
+    $pusher->trigger( 'test-channel',
+                      'test-event', 
+                      array('text' => 'Preparing the Pusher Laracon.eu workshop!'));
+    
+    return view('welcome');
+});
+
+Route::controller('notifications', 'NotificationController');
+Route::controller('home', 'noticiaController');
+Route::controller('/', 'noticiaController');

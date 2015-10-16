@@ -15,6 +15,8 @@
     <script src='assets/fullcalendar-2.4.0/lib/jquery.min.js'></script>
     <script src='assets/fullcalendar-2.4.0/fullcalendar.min.js'></script>
     <script src='assets/fullcalendar-2.4.0/lang/es.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="http://js.pusher.com/3.0/pusher.min.js"></script>
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,6 +25,20 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        // Ensure CSRF token is sent with AJAX requests
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        // Added Pusher logging
+        Pusher.log = function(msg) {
+            console.log(msg);
+        };
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -190,6 +206,30 @@
 
     renderCalendar();
   });
-  </script>
+</script>
+<script>
+
+  // Handle the form submission
+
+  function notifyInit() {
+
+    var pusher = new Pusher("{{env("PUSHER_KEY")}}");
+    var channel = pusher.subscribe('canal-suspension');
+    channel.bind('evento-suspension', function(data) {
+      $.post('http://localhost:8000/home', data).success(notifySuccess);
+      toastr.success("hola", "Desarrollo Web", {"positionClass": "toast-bottom-left"});
+    });
+    // Ensure the normal browser event doesn't take place
+    /*function showNotification(data) {
+        
+        return true;
+    }*/
+
+  }
+  function notifySuccess() {
+    console.log('notification submitted');
+  }
+  $(notifyInit);
+</script>
 </body>
 </html>
