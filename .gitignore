@@ -1,5 +1,11 @@
 /vendor
 /node_modules
+/storage
+/config
 Homestead.yaml
 Homestead.json
 .env
+storage/framework/views/92f731738c59b9950ac292706a2c4735
+config/app.php
+config/database.php
+config/database.php

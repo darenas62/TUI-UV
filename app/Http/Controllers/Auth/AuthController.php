@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 class AuthController extends Controller
 {
     //entre comillas la ruta a la que deseas redireccionar
-    protected $redirectTo = 'auth/register';
+    protected $redirectTo = '/home';
     protected $username = 'run';
     /*
     |--------------------------------------------------------------------------

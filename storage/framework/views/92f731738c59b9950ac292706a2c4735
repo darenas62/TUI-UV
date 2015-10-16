@@ -1,34 +1,19 @@
+
+
+<?php $__env->startSection('content'); ?>
 <!-- app/views/nerds/show.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Secretaria | Mostrar noticia</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
 <div class="container">
-
-<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="<?php echo URL::to('noticias'); ?>">Inicio</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="<?php echo URL::to('noticias'); ?>">Ver todas las noticiass</a></li>
-        <li><a href="<?php echo URL::to('noticias/create'); ?>">Publicar una noticia</a>
-    </ul>
-</nav>
-
+<a class="btn btn-danger" style="margin-bottom: 20px;" href="<?php echo URL::to('/'); ?>">Volver a las noticias académicas</a>
 <h1>Viendo <?php echo e($noticia->titulo); ?></h1>
-
-    <div class="jumbotron text-center">
+    <div class="jumbotron">
         <h2><?php echo e($noticia->titulo); ?></h2>
-        <p>
-            <strong>contenido:</strong> <?php echo e($noticia->contenido); ?><br>
-            <strong>Fecha de creacion:</strong> <?php echo e($noticia->created_at); ?><br>
-            <strong>Ultima actualizacion:</strong> <?php echo e($noticia->updated_at); ?><br>
-        </p>
+        <p><?php echo e($noticia->contenido); ?></p>
+        <p>Publicado: <?php echo e($noticia->created_at); ?></p>
+        <p>Actualizado: <?php echo e($noticia->updated_at); ?></p>
     </div>
-
 </div>
 </body>
 </html> 
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

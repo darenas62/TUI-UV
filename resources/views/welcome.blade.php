@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="http://js.pusher.com/3.0/pusher.min.js"></script>
+
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
@@ -42,4 +44,11 @@
             </div>
         </div>
     </body>
+        <script>
+        var pusher = new Pusher("{{env("PUSHER_KEY")}}");
+        var channel = pusher.subscribe('test-channel');
+        channel.bind('test-event', function(data) {
+          alert(data.text);
+        });
+    </script>
 </html>

@@ -24,6 +24,8 @@ Route::get('home', [
 /* */
 
 /* Inicio con noticias RECARGADOOOO */
+use Illuminate\Support\Facades\App;
+
 Route::get('/', [
   'as' => 'home',
   'uses' => 'noticiaController@index'
@@ -45,24 +47,29 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthController@postRegister']);
 
 // Usuarios
-
+Route::get('secretaria', [
+  'as' => 'secretaria',
+  'uses' => 'Users\secretariaController@index'
+  ]);
+Route::post('secretaria', 
+  ['as' => 'secretaria', 'uses' => 'Users\secretariaController@create']);
 
 Route::get('estudiante', 'Users\estudianteController@index');
 Route::get('admin', 'Users\adminController@index');
+Route::get('profesor', 'Users\profesorController@index');
 
 Route::resource('noticias', 'noticiaController');
 
+Route::controller('notifications', 'NotificationController');
+Route::controller('home', 'noticiaController');
+Route::controller('/', 'noticiaController');
 
 Route::resource('calendars', 'CalendarController');
-
 Route::get('calendars/{id}/delete', [
     'as' => 'calendars.delete',
     'uses' => 'CalendarController@destroy',
 ]);
-
-
 Route::resource('horarios', 'HorarioController');
-
 Route::get('horarios/{id}/delete', [
     'as' => 'horarios.delete',
     'uses' => 'HorarioController@destroy',

@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TUI UV</title>
     {!! Html::style('assets/css/bootstrap.css') !!}
+    <!--{!! Html::style('assets/fullcalendar-2.4.0/fullcalendar.min.css') !!}
+    {!! Html::style('assets/fullcalendar-2.4.0/fullcalendar.print.css') !!}
+    {!! Html::style('assets/fullcalendar-2.4.0/fullcalendar.css') !!}-->
+    <link href='assets/fullcalendar-2.4.0/fullcalendar.css' rel='stylesheet' />
+    <link href='assets/fullcalendar-2.4.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel='stylesheet' />
+    <script src='assets/fullcalendar-2.4.0/lib/moment.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='assets/fullcalendar-2.4.0/fullcalendar.min.js'></script>
+    <script src='assets/fullcalendar-2.4.0/lang/es.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="http://js.pusher.com/3.0/pusher.min.js"></script>
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -14,6 +26,20 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        // Ensure CSRF token is sent with AJAX requests
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        // Added Pusher logging
+        Pusher.log = function(msg) {
+            console.log(msg);
+        };
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -43,7 +69,7 @@
 
             @else
                     <li>
-                        <a href="#">Bienvenido(a) {{ Auth::user()->name }}</a>
+                        <a href="#">Bienvenido(a) @if(Auth::user()->group == 2) profesor(a) @endif{{ Auth::user()->name }}</a>
                     </li>
                     @if(Auth::user()->group == 1)
                       <li><a href="{{route('auth/register')}}">Registrar</a></li>
@@ -70,5 +96,118 @@
     @yield('content')
     <!-- Scripts -->
     {!! Html::script('assets/js/bootstrap.min.js') !!}
+   <!-- {!! Html::script('assets/fullcalendar-2.4.0/fullcalendar.min.js') !!}
+    {!! Html::script('assets/js/moment.js') !!}
+    {!! Html::script('assets/js/jquery-2.1.4.min.js') !!}
+    {!! Html::script('assets/js/jquery-ui.min') !!}-->
+    <!-- Full calendar-->
+
+<script>
+    
+  $(document).ready(function() {
+    var currentLangCode = 'es';
+
+    // build the language selector's options
+    /*$.each($.fullCalendar.langs, function(langCode) {
+      $('#lang-selector').append(
+        $('<option/>')
+          .attr('value', langCode)
+          .prop('selected', langCode == currentLangCode)
+          .text(langCode)
+      );
+    });
+
+    // rerender the calendar when the selected option changes
+    $('#lang-selector').on('change', function() {
+      if (this.value) {
+        currentLangCode = this.value;
+        $('#calendar').fullCalendar('destroy');
+        renderCalendar();
+      }
+    });
+    */
+    function renderCalendar() {
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+        },
+        defaultView: 'agendaWeek',
+        lang: currentLangCode,
+        columnFormat: 'dddd',
+        buttonIcons: false, // show the prev/next text
+        weekNumbers: true,
+        editable: false,
+        eventLimit: true, // allow "more" link when too many events
+        firstDay: 1,
+        timeFormat: 'H:mm',
+        hiddenDays: [ 6, 0],
+        handleWindowResize: true,
+        minTime: '08:00:00',
+        maxTime: '20:00:00',
+        /*views: {
+          agenda5Week: {
+                type: 'agenda',
+                duration: { days: 5 },
+                buttonText: 'Semana'
+            }
+        },*/
+        events: [
+          {
+            title: 'Lenguajes de programación',
+            dow: [1],
+            start: '12:00:00',
+            end: '13:30:00'
+          },
+          {
+            title: 'Lenguajes de programación',
+            dow: [2],
+            start: '10:15:00',
+            end: '11:45:00'
+          },
+          {
+            title: 'Sistemas de bases de datos',
+            dow: [2],
+            start: '08:30:00',
+            end: '10:00:00'
+          },
+          {
+            title: 'Sistemas de bases de datos',
+            dow: [3],
+            start: '10:15:00',
+            end: '11:45:00'
+          },
+          {
+            title: 'Biología',
+            dow: [3],
+            start: '14:15:00',
+            end: '17:00:00'
+          },
+          {
+            title: 'Evaluación de proyectos',
+            dow: [1],
+            start: '14:30:00',
+            end: '17:30:00'
+          },
+          {
+            title: 'Arquitectura de software',
+            dow: [4],
+            start: '10:15:00',
+            end: '13:30:00'
+          },
+          {
+            title: 'Desarrollo web',
+            dow: [5],
+            start: '10:15:00',
+            end: '13:30:00'
+          },
+        ]
+      });
+    }
+
+    renderCalendar();
+  });
+</script>
 </body>
 </html>
