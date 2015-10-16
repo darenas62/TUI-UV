@@ -3601,3 +3601,237 @@ Stack trace:
 #49 /home/vagrant/Code/tui_1/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(87): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #50 /home/vagrant/Code/tui_1/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #51 {main}  
+[2015-10-16 03:42:25] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:42:25] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=e20673ff47f5326109e18c6de4e23a04e90b5dde6b3bd2be215ce3446a736af6&auth_timestamp=1444977745&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:42:25] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:42:25] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:43:19] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:43:19] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=20d594f92a863a16af26b6520f9d32b92c64d534c112dd0e43cb8b9e45b40cb0&auth_timestamp=1444977799&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:43:19] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:43:19] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:44:31] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:44:31] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=a726035f8972b6cc5d78d9e4f4951aae93080a4b28f685090edf88919b9f633b&auth_timestamp=1444977871&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:44:31] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:44:32] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:44:40] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:44:40] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=c82628228b1a1c1cd1ead716a72e79e6908e6a6abadd1e12ddefaf5d88f2c703&auth_timestamp=1444977880&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:44:40] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:44:40] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:45:03] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:45:03] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=6d374008d86635dfc46e41564d5dc08f983b82d943398237729c58596a9cd3c3&auth_timestamp=1444977903&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:45:03] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:45:03] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:46:12] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:46:12] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=9cff5556d6827320429f515da64b6bff9db8930471c8df2134894e669dab8f1a&auth_timestamp=1444977972&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:46:12] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:46:13] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:46:50] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:46:50] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=6e8a382cc8505eb024b0f72adc246108f0aa55cb8bdb50f3a81cfb2595de8c1a&auth_timestamp=1444978010&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:46:50] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:46:51] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:47:19] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:47:19] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=5eb350617fdc97cdcde946c70b77d4987c5eefdef2f4cf80c5ad9c4710c231a8&auth_timestamp=1444978039&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:47:19] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:47:19] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:47:47] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:47:47] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=91807aa3af63959cdcf26dd9bcc58fa961fbd3abe39a762cbb98acc606ebb2cb&auth_timestamp=1444978067&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:47:47] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:47:48] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:47:54] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:47:54] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=13754060b2905e054753d02d05b6238843d304805a9bd51a4e201fd79926037d&auth_timestamp=1444978074&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:47:54] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:47:54] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:49:33] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:49:33] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=0ea76092bc5355d20a2a297a1f7f7ce99fad85867d542fee3d743f5c8ba7e474&auth_timestamp=1444978173&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:49:33] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:49:34] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:49:39] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:49:39] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=f09671512eda71b695c1847fd5fd6abfe9480bebab3b4aaa7e537919c77068fd&auth_timestamp=1444978179&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:49:39] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:49:40] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:49:52] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:49:52] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=f8fad8270c42eec725cf619527649bcbe2244c93c3e11a7317fe98772f657099&auth_timestamp=1444978192&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:49:52] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:49:52] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:51:12] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:51:12] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=11b62109705151909ab9a522409ca62a250b27c5eb4b5219a620f52d82b73156&auth_timestamp=1444978272&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:51:12] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:51:12] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:51:30] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:51:30] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=15e7a0ca5492295c9eb1275ecb7689017a6bbfc9b1e697e7bfae30a7c335f998&auth_timestamp=1444978290&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:51:30] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:51:30] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:52:18] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:52:18] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=e1da74ef266038a46a4b2c76a1a8a7a5aabfc5bb070769934b798c9f5ced892b&auth_timestamp=1444978338&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:52:18] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:52:19] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:52:39] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:52:39] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=7f5cb6ee3ed8bb44f9ab322fb93ee652745be0184ab8627d8e7d66b83b03226f&auth_timestamp=1444978359&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:52:39] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:52:40] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:56:04] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:56:04] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=fd40fd4ce9101ca777ee3708f0f3745c19873084cd23e91f5cec02730f66d91e&auth_timestamp=1444978564&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:56:04] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:56:04] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:56:12] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:56:12] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=04c52768e3125d6b93d4feb46818f2b2788269277cef0ecc44d89ffc4edc1452&auth_timestamp=1444978572&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:56:12] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:56:12] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:56:33] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:56:33] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=dd901b295c4fa5ffdb3de37e15d6a9b38096916618afe02649320941fe8fcb34&auth_timestamp=1444978593&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:56:33] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:56:33] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:56:40] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:56:40] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=fc2d886d12513f64f9e54e13c32e55e193f02325c2b71da687d5643926f9c7a7&auth_timestamp=1444978600&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:56:40] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:56:40] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:57:00] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:57:00] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=0958b9375f25973a73ef3a73a7f642afdf474f60044d22c4b2b14cd3a0b0c4dd&auth_timestamp=1444978620&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:57:00] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:57:00] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 03:58:39] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 03:58:39] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=a7a758c6175dff99b54618457c7dbac0b1db40e7410bd6c449685a84062cc6ce&auth_timestamp=1444978719&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 03:58:39] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 03:58:40] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 04:00:05] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 04:00:05] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=177f627280d0eb3f5535e9a099ecb76ff93d7df10fc1e6b475a1906087e068d7&auth_timestamp=1444978805&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 04:00:05] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 04:00:05] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 04:00:41] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 04:00:41] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=7673c891f47715b5f7df8c4b6fdeb24fe212364e30434232d25116b2d0a312ac&auth_timestamp=1444978841&auth_version=1.0&body_md5=37888866df73b43a6aac2af5bb45766f )  
+[2015-10-16 04:00:41] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"5436546\"}","channels":["canal-suspension"]}  
+[2015-10-16 04:00:42] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  
+[2015-10-16 04:00:57] local.INFO: Pusher: ->trigger received string channel "canal-suspension". Converting to array.  
+[2015-10-16 04:00:57] local.INFO: Pusher: curl_init( http://api.pusherapp.com:80/apps/148301/events?auth_key=b7eca1a0bab1f658cb3e&auth_signature=85af0648cc4d93d3dffdd4eff6d00e625ec8be9e37bbc59d2f4530edbd74c7d8&auth_timestamp=1444978857&auth_version=1.0&body_md5=a756f0ce64dd6a2900f60d2138a474ba )  
+[2015-10-16 04:00:57] local.INFO: Pusher: trigger POST: {"name":"evento-suspension","data":"{\"text\":\"Se suspende la clase de desarrollo web\"}","channels":["canal-suspension"]}  
+[2015-10-16 04:00:57] local.INFO: Pusher: exec_curl response: Array
+(
+    [body] => {}
+    [status] => 200
+)
+  

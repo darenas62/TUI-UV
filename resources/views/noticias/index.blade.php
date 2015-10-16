@@ -116,7 +116,30 @@
     </tbody>
 </table>
 </div>
- 
+ <script>
+
+  // Handle the form submission
+
+  function notifyInit() {
+    var pusher = new Pusher("{{env("PUSHER_KEY")}}");
+    var channel = pusher.subscribe('canal-suspension');
+    channel.bind('evento-suspension', function(data) {
+      notifySuccess(data);
+    });
+    // Ensure the normal browser event doesn't take place
+    /*function showNotification(data) {
+        
+        return true;
+    }*/
+
+  }
+  function notifySuccess(data) {
+    //console.log('notification submitted');
+    toastr.success(data.text, "Desarrollo Web", {"positionClass": "toast-bottom-left"});
+  }
+  $(notifyInit);
+
+</script>
 
 
 @endsection

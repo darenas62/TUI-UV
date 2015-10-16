@@ -14,8 +14,9 @@
     <?php echo Html::style('assets/fullcalendar-2.4.0/fullcalendar.css'); ?>-->
     <link href='assets/fullcalendar-2.4.0/fullcalendar.css' rel='stylesheet' />
     <link href='assets/fullcalendar-2.4.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel='stylesheet' />
     <script src='assets/fullcalendar-2.4.0/lib/moment.min.js'></script>
-    <script src='assets/fullcalendar-2.4.0/lib/jquery.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src='assets/fullcalendar-2.4.0/fullcalendar.min.js'></script>
     <script src='assets/fullcalendar-2.4.0/lang/es.js'></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -213,30 +214,6 @@
 
     renderCalendar();
   });
-</script>
-<script>
-
-  // Handle the form submission
-
-  function notifyInit() {
-
-    var pusher = new Pusher("<?php echo e(env("PUSHER_KEY")); ?>");
-    var channel = pusher.subscribe('canal-suspension');
-    channel.bind('evento-suspension', function(data) {
-      $.post('http://localhost:8000/home', data).success(notifySuccess);
-      toastr.success("hola", "Desarrollo Web", {"positionClass": "toast-bottom-left"});
-    });
-    // Ensure the normal browser event doesn't take place
-    /*function showNotification(data) {
-        
-        return true;
-    }*/
-
-  }
-  function notifySuccess() {
-    console.log('notification submitted');
-  }
-  $(notifyInit);
 </script>
 </body>
 </html>

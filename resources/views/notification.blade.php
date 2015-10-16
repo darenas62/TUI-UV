@@ -42,7 +42,7 @@
 
 <section class="blue-gradient-background splash">
     <div class="container center-all-container">
-        <form id="notify_form" action="http://localhost:8000/home" method="post">
+        <form id="notify_form" action="notification/notify" method="post">
             <input type="text" id="notify_text" name="notify_text"
                    placeholder="What's the notification?" minlength="3" maxlength="140" required />
         </form>
@@ -69,13 +69,13 @@ function notifySubmit() {
   var pusher = new Pusher("{{env("PUSHER_KEY")}}");
   var channel = pusher.subscribe('canal-suspension');
   channel.bind('evento-suspension', function(data) {
-    toastr.success(data.text, "Desarrollo Web", {"positionClass": "toast-bottom-left"});
+    //toastr.success(data.text, "Desarrollo Web", {"positionClass": "toast-bottom-left"});
   });
   // Ensure the normal browser event doesn't take place
   return false;
 }
 function showNotification(data) {
-    toastr.success(data.text, "Desarrollo Web", {"positionClass": "toast-bottom-left"});
+    //toastr.success(data.text, "Desarrollo Web", {"positionClass": "toast-bottom-left"});
     return true;
 }
 
