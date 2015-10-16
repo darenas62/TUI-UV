@@ -138,9 +138,9 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Vinkla\Pusher\PusherServiceProvider::class,
 
-        Illuminate\Html\HtmlServiceProvider::class,
+        //Illuminate\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
-        Mitul\Generator\GeneratorServiceProvider::class,
+        //Mitul\Generator\GeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...
