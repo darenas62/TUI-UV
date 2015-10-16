@@ -58,6 +58,7 @@
             <li><a href="{!! URL::to('/') !!}">Inicio</a>
             @if (!Auth::guest())
               @if (Auth::user()->group == 1 | Auth::user()->group == 3)
+              <li><a href="{!! URL::to('calendars') !!}">Calendario de evaluaciones</a></li>
               <li><a href="{!! URL::to('noticias/create') !!}">Publicar una noticia</a></li>
               @endif
             @endif
